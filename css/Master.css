@@ -491,3 +491,47 @@ footer p:hover {
 .extra-project,.extra-experience,.extra-education{
   display: none;
 }
+
+/* Date / Location metadata styling */
+.title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title-row .right {
+  text-align: right;
+}
+.date {
+  display: inline-block;
+  color: var(--primary-color);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+.location {
+  display: inline-block;
+  color: var(--text-light);
+  font-style: italic;
+  font-weight: 600;
+}
+.specialization {
+  color: var(--text-light);
+  font-weight: 600;
+}
+
+/* Slight spacing for meta items inside title rows */
+.title-row .left .location,
+.title-row .left .specialization {
+  margin: 0;
+}
+
+/* Make dates more visible on small screens */
+@media (max-width: 768px) {
+  .title-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .title-row .right {
+    text-align: left;
+  }
+}
